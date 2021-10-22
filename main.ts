@@ -1,13 +1,9 @@
 let Boolet = 0
-controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    Player_1.vy = -200
-})
 sprites.onOverlap(SpriteKind.Player, Boolet, function (sprite, otherSprite) {
     sprite.setVelocity(0, 0)
     music.pewPew.play()
     pause(1000)
 })
-let Player_1: Sprite = null
 let mySprite = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
@@ -82,3 +78,4 @@ mySprite,
     `],
 500,
 true
+)
