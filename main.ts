@@ -2,10 +2,10 @@ let Boolet = 0
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     if (LorR == 1) {
         bullet.setPosition(Player_1.x, Player_1.y)
-        bullet.setVelocity(500, 0)
+        bullet.setVelocity(4000, 0)
     } else if (LorR == 0) {
         bullet.setPosition(Player_1.x, Player_1.y)
-        bullet.setVelocity(-500, 0)
+        bullet.setVelocity(-4000, 0)
     }
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
@@ -191,9 +191,9 @@ Player_1 = sprites.create(img`
     . . . . . 6 . . 6 6 . . . . . . 
     . . . . . 6 . . . 6 . . . . . . 
     `, SpriteKind.Player)
-info.setLife(3)
 scene.cameraFollowSprite(Player_1)
 tiles.setTilemap(tilemap`level1`)
+info.setLife(3)
 controller.moveSprite(Player_1, 100, 0)
 Player_1.ay = 500
 LorR = 1
