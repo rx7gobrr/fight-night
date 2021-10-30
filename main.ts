@@ -1,7 +1,28 @@
 let Boolet = 0
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    Player_1.vy = -200
+    if (Player_1.vy == 0) {
+        Player_1.vy = -200
+    }
 })
+function Code_Holder () {
+    Homescreen = true
+    if (Homescreen == true) {
+        if (controller.A.isPressed()) {
+            let Mode_Select = 0
+            if (Mode_Select == 0) {
+                Homescreen = false
+                tiles.setTilemap(tilemap`level3`)
+                Tutorial()
+            }
+            if (Mode_Select == 1) {
+                Homescreen = false
+            }
+            if (Mode_Select == 2) {
+                Homescreen = false
+            }
+        }
+    }
+}
 function Tutorial () {
     game.splash("Welcome to the Night Fight Tutorial")
     game.splash("To move left and right, press left and right")
@@ -15,6 +36,7 @@ sprites.onOverlap(SpriteKind.Player, Boolet, function (sprite, otherSprite) {
     music.pewPew.play()
     pause(1000)
 })
+let Homescreen = false
 let Player_1: Sprite = null
 scene.setBackgroundImage(img`
     9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
