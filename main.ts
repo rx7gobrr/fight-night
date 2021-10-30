@@ -1,4 +1,13 @@
 let Boolet = 0
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (LorR == 1) {
+        bullet.setPosition(Player_1.x, Player_1.y)
+        bullet.setVelocity(500, 0)
+    } else if (LorR == 0) {
+        bullet.setPosition(Player_1.x, Player_1.y)
+        bullet.setVelocity(-500, 0)
+    }
+})
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (Player_1.vy == 0) {
         Player_1.vy = -200
@@ -37,7 +46,9 @@ sprites.onOverlap(SpriteKind.Player, Boolet, function (sprite, otherSprite) {
     pause(1000)
 })
 let Homescreen = false
+let LorR = 0
 let Player_1: Sprite = null
+let bullet: Sprite = null
 scene.setBackgroundImage(img`
     9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
     9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
@@ -160,6 +171,8 @@ scene.setBackgroundImage(img`
     9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
     9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
     `)
+bullet = sprites.create(assets.image`Boolet`, SpriteKind.Projectile)
+bullet.setPosition(0, 0)
 Player_1 = sprites.create(img`
     . . . . . . 6 6 6 . . . . . . . 
     . . . . . 6 6 6 6 6 . . . . . . 
@@ -183,3 +196,16 @@ scene.cameraFollowSprite(Player_1)
 tiles.setTilemap(tilemap`level1`)
 controller.moveSprite(Player_1, 100, 0)
 Player_1.ay = 500
+LorR = 1
+forever(function () {
+    if (bullet.vx == 0) {
+        bullet.setPosition(0, 0)
+    }
+})
+forever(function () {
+    if (controller.right.isPressed()) {
+        LorR = 1
+    } else if (controller.left.isPressed()) {
+        LorR = 0
+    }
+})
