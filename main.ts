@@ -14,23 +14,7 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     }
 })
 function Code_Holder () {
-    Homescreen = true
-    if (Homescreen == true) {
-        if (controller.A.isPressed()) {
-            let Mode_Select = 0
-            if (Mode_Select == 0) {
-                Homescreen = false
-                tiles.setTilemap(tilemap`level3`)
-                Tutorial()
-            }
-            if (Mode_Select == 1) {
-                Homescreen = false
-            }
-            if (Mode_Select == 2) {
-                Homescreen = false
-            }
-        }
-    }
+	
 }
 controller.down.onEvent(ControllerButtonEvent.Pressed, function () {
     Tutorial()
@@ -51,7 +35,6 @@ sprites.onOverlap(SpriteKind.Player, Boolet, function (sprite, otherSprite) {
     music.pewPew.play()
     pause(1000)
 })
-let Homescreen = false
 let LorR = 0
 let Player_1: Sprite = null
 let bullet: Sprite = null
