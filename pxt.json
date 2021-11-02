@@ -3,7 +3,9 @@
     "description": "",
     "dependencies": {
         "device": "*",
-        "block-menu": "github:riknoll/arcade-custom-menu#v0.0.1"
+        "block-menu": "github:riknoll/arcade-custom-menu#v0.0.1",
+        "arcade-clock": "github:pelikhan/arcade-clock#v0.0.2",
+        "Timers": "github:darzu/arcade-timers#v1.0.0"
     },
     "files": [
         "main.blocks",

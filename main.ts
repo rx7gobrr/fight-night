@@ -147,22 +147,20 @@ function Tutorial () {
             9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
             9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
             `)
+        Player_1.setPosition(128, 858)
         scene.cameraFollowSprite(Player_1)
-        tiles.setTilemap(tilemap`level1`)
         bullet.setPosition(0, 0)
         info.setLife(3)
         controller.moveSprite(Player_1, 100, 0)
         Player_1.ay = 500
         LorR = 1
-        game.splash("Welcome to")
-        game.splash("the Night Fight Tutorial")
-        game.splash("To move left and right,")
-        game.splash("press left and right")
-        game.splash("Press A (Z) to jump")
-        game.splash("If playing with 2 players,")
-        game.splash("P1: wasd + q = A e = B")
-        game.splash("P2: ijkl + i = A o = B")
-        game.splash("Press B (X) To shoot")
+        game.showLongText("Welcome to the Fight Night Tutorial", DialogLayout.Center)
+        game.showLongText("To move left and right, Press left and right,", DialogLayout.Bottom)
+        game.showLongText("A (Z) to Jump, and B (X) to Shoot", DialogLayout.Bottom)
+        game.showLongText("With 2 players,", DialogLayout.Bottom)
+        game.showLongText("P1: wasd + Q = A E = B", DialogLayout.Bottom)
+        game.showLongText("P2: ijkl + I = A O = B", DialogLayout.Bottom)
+        game.showLongText("When Touching a Cracked Wall, Press the Jump button Again to Wall Jump", DialogLayout.Bottom)
     }
 }
 function Credits () {
@@ -314,23 +312,21 @@ function Start_Code () {
 blockMenu.onMenuOptionSelected(function (option, index) {
     if (option == "Tutorial") {
         Game_Started = true
-        Tutorial()
         blockMenu.setControlsEnabled(false)
         blockMenu.closeMenu()
+        Tutorial()
     }
     if (option == "Credits") {
         Player_1.destroy()
         Game_Started = true
         Credits()
-        blockMenu.setControlsEnabled(false)
-        blockMenu.closeMenu()
     }
     if (option == "1 Player") {
-        Player_1.destroy()
         Game_Started = true
-        Start_Code()
+        Player_1.destroy()
         blockMenu.setControlsEnabled(false)
         blockMenu.closeMenu()
+        Start_Code()
     }
 })
 let LorR = 0
@@ -339,23 +335,24 @@ let Player_1: Sprite = null
 let Game_Started = false
 Game_Started = false
 Player_1 = sprites.create(img`
-    . . . . . . 6 6 6 . . . . . . . 
-    . . . . . 6 6 6 6 6 . . . . . . 
-    . . . . . 6 6 6 6 6 . . . . . . 
-    . . . . . 6 6 6 6 6 . . . . . . 
-    . . . . . . 6 6 6 . . . . . . . 
-    . . . . . . . 6 . . . . . . . . 
-    . . . . . 6 6 6 6 6 . . . . . . 
-    . . . . 6 6 . 6 . 6 6 . . . . . 
-    . . . 6 6 . . 6 . . 6 6 . . . . 
-    . . . 6 . . . 6 . . . 6 . . . . 
-    . . . . . . . 6 . . . . . . . . 
-    . . . . . . 6 6 6 . . . . . . . 
-    . . . . . . 6 . 6 . . . . . . . 
-    . . . . . 6 . . 6 . . . . . . . 
-    . . . . . 6 . . 6 6 . . . . . . 
-    . . . . . 6 . . . 6 . . . . . . 
+    . . . . . . 9 9 9 . . . . . . . 
+    . . . . . 9 9 9 9 9 . . . . . . 
+    . . . . . 9 9 9 9 9 . . . . . . 
+    . . . . . 9 9 9 9 9 . . . . . . 
+    . . . . . . 9 9 9 . . . . . . . 
+    . . . . . . . 9 . . . . . . . . 
+    . . . . . 9 9 9 9 9 . . . . . . 
+    . . . . 9 9 . 9 . 9 9 . . . . . 
+    . . . 9 9 . . 9 . . 9 9 . . . . 
+    . . . 9 . . . 9 . . . 9 . . . . 
+    . . . . . . . 9 . . . . . . . . 
+    . . . . . . 9 9 9 . . . . . . . 
+    . . . . . . 9 . 9 . . . . . . . 
+    . . . . . 9 . . 9 . . . . . . . 
+    . . . . . 9 . . 9 9 . . . . . . 
+    . . . . . 9 . . . 9 . . . . . . 
     `, SpriteKind.Player)
+Player_1.setPosition(76, 93)
 bullet = sprites.create(assets.image`Boolet`, SpriteKind.Projectile)
 scene.setBackgroundImage(assets.image`Main Menu Background`)
 blockMenu.showMenu([
