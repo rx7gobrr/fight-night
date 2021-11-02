@@ -17,11 +17,6 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
         }
     }
 })
-scene.onOverlapTile(SpriteKind.Player, assets.tile`Cracked Wall`, function (sprite, location) {
-    if (controller.A.isPressed()) {
-        Player_1.setVelocity(0, -200)
-    }
-})
 function Tutorial () {
     if (Game_Started == true) {
         tiles.setTilemap(tilemap`Tutorial`)
@@ -307,6 +302,16 @@ function Start_Code () {
         controller.moveSprite(Player_1, 100, 0)
         Player_1.ay = 500
         LorR = 1
+        if (Player_1.tileKindAt(TileDirection.Right, assets.tile`Cracked Wall`)) {
+            if (controller.A.isPressed()) {
+                Player_1.setVelocity(0, -200)
+            }
+        }
+        if (Player_1.tileKindAt(TileDirection.Left, assets.tile`Cracked Wall`)) {
+            if (controller.A.isPressed()) {
+                Player_1.setVelocity(0, -200)
+            }
+        }
     }
 }
 blockMenu.onMenuOptionSelected(function (option, index) {
