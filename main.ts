@@ -163,6 +163,9 @@ function Tutorial () {
         game.showLongText("When Touching a Cracked Wall, Press the Jump button Again to Wall Jump", DialogLayout.Bottom)
     }
 }
+function Tile_Maps_holder () {
+	
+}
 function Credits () {
     game.splash("Coding")
     game.splash("Mikhail & i honestly forgot his name")
