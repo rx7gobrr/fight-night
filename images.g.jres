@@ -9,6 +9,11 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "Boolet"
     },
+    "image3": {
+        "data": "hwQQABAAAAAwMzOHiO4AADPjfoiI7gAAM+Pul5lEqt0z4+6HiKSq3TPu7oeIpKrdM+Puh0hEClAz7u6HSEUKADP/7odIRAoAM+7uh4ikqt0z/+6HiKSq3TPj7peZRKrdAON+iIgAAFAAAACHiAgAAAAzBgCACAAAADIiItIAAAAAMwYA3QAAAA==",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Diah wache flued"
+    },
     "*": {
         "mimeType": "image/x-mkcd-f4",
         "dataEncoding": "base64",

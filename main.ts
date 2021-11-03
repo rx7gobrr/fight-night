@@ -9,11 +9,25 @@ controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
             bullet.setVelocity(-4000, 0)
         }
     }
+    if (Game_Started == true) {
+        if (LorR == 1) {
+            bullet.setPosition(Player_2.x, Player_2.y)
+            bullet.setVelocity(4000, 0)
+        } else if (LorR == 0) {
+            bullet.setPosition(Player_2.x, Player_2.y)
+            bullet.setVelocity(-4000, 0)
+        }
+    }
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (Game_Started == true) {
         if (Player_1.vy == 0) {
             Player_1.vy = -200
+        }
+        if (Game_Started == true) {
+            if (Player_2.vy == 0) {
+                Player_2.vy = -200
+            }
         }
     }
 })
@@ -148,11 +162,15 @@ function Tutorial () {
             cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
             `)
         Player_1.setPosition(128, 858)
+        Player_2.setPosition(128, 858)
         scene.cameraFollowSprite(Player_1)
+        scene.cameraFollowSprite(Player_2)
         bullet.setPosition(0, 0)
         info.setLife(3)
         controller.moveSprite(Player_1, 100, 0)
+        controller.moveSprite(Player_2, 100, 0)
         Player_1.ay = 500
+        Player_2.ay = 500
         LorR = 1
         game.showLongText("Welcome to the Fight Night Tutorial", DialogLayout.Center)
         game.showLongText("To move left and right, Press left and right,", DialogLayout.Bottom)
@@ -334,6 +352,7 @@ function Start_Code () {
 }
 let LorR = 0
 let bullet: Sprite = null
+let Player_2: Sprite = null
 let Player_1: Sprite = null
 let Game_Started = false
 Game_Started = false
@@ -355,25 +374,9 @@ Player_1 = sprites.create(img`
     . . . . . f f f . . . . f f f . 
     . . . . . f f f 6 . . . f f f 6 
     `, SpriteKind.Player)
-let Player_2 = sprites.create(img`
-    . . . . . . . . . . . . . . . . 
-    . . . 3 3 3 3 3 3 3 3 3 3 . . . 
-    . . 3 3 3 3 3 3 3 3 3 3 3 . . . 
-    . . 3 3 3 3 d 3 d d d d 3 3 . . 
-    . . 3 3 d d d d d f d f d d . . 
-    . . 3 d d d d d d f d f d d . . 
-    . . 3 d d d d d d d d d d d . . 
-    . . 3 7 d d d d d d d d d 7 . . 
-    . . 7 7 7 7 7 7 7 7 7 7 7 7 7 . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    . . . . . . . . . . . . . . . . 
-    `, SpriteKind.Player)
+Player_2 = sprites.create(assets.image`Diah wache flued`, SpriteKind.Player)
 Player_1.setPosition(76, 93)
+Player_2.setPosition(76, 93)
 bullet = sprites.create(assets.image`Boolet`, SpriteKind.Projectile)
 scene.setBackgroundImage(assets.image`Main Menu Background`)
 blockMenu.showMenu([
@@ -388,6 +391,12 @@ game.onUpdate(function () {
         Player_1.ay = 0
     } else {
         Player_1.ay = 500
+    }
+    if (Player_2.isHittingTile(CollisionDirection.Left) || Player_2.isHittingTile(CollisionDirection.Right)) {
+        Player_2.vy = 0
+        Player_2.ay = 0
+    } else {
+        Player_2.ay = 500
     }
 })
 forever(function () {

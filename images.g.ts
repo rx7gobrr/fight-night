@@ -134,6 +134,25 @@ f f f 7 7 7 f
 f b b 7 f f f 
 f f f f f . . 
 `;
+            case "image3":
+            case "Diah wache flued":return img`
+. 3 3 3 3 3 3 3 3 3 3 . . . . . 
+3 3 3 3 3 3 3 3 3 3 3 . . . . . 
+3 3 3 3 e 3 e f e f 3 3 . 3 2 3 
+3 e e e e e e f e f e e . 3 3 3 
+3 e e e e e e e e e e e . 6 2 6 
+3 7 e e e e e e e e e 7 . . 2 . 
+7 8 7 7 7 7 7 7 7 7 7 8 7 . 2 . 
+8 8 9 8 8 8 8 8 8 8 9 8 8 . 2 . 
+8 8 9 8 8 8 8 8 8 8 9 8 8 . 2 d 
+8 8 9 8 8 4 4 4 8 8 9 8 8 8 d d 
+e e 4 4 4 4 5 4 4 4 4 . 8 8 . . 
+e e 4 a a 4 4 4 a a 4 . . . . . 
+. . a a a a a a a a a . . . . . 
+. . a a a . . . a a a . . . . . 
+. . d d d . . . d d d . . . . . 
+. . d d d 5 . . d d d 5 . . . . 
+`;
         }
         return null;
     })
