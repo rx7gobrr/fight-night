@@ -6,15 +6,15 @@
 . . 2 2 2 d d d d d d d d . . . 
 . . 2 2 f d d d d d d d f . . . 
 . 2 2 f c f f f b f f f c f . . 
-. 2 2 c c f f f b f f f c c . . 
-. . . c c f f f b f f f c c . . 
-. . . c c f f f b f f f c c . . 
-. . . c c 8 8 8 8 8 8 8 c c . . 
-. . . d d 8 8 8 8 8 8 8 d d . . 
-. . . d d 8 8 8 8 8 8 8 d d . . 
-. . . . . 8 8 8 . 8 8 8 . . . . 
-. . . . . f f f . f f f . . . . 
-. . . . . f f f 6 f f f 6 . . . 
+. . 2 c c f f f b f f f c c . . 
+. . c c c f f f b f f f c c . . 
+. c c c . f f f b f f f c c . . 
+. c c d d f f f 8 f f f c c . . 
+. . c d d 8 8 8 8 8 8 8 d d . . 
+. . . . . 8 8 8 8 . 8 8 8 d . . 
+. . . . . 8 8 8 . . . 8 8 8 8 . 
+. . . . . f f f . . . . f f f . 
+. . . . . f f f 6 . . . f f f 6 
 `</field><data>{"commentRefs":[],"fieldData":{"img":")m3^z-ehwde}1XsK$JRh"}}</data></shadow></value><value name="kind"><shadow type="spritekind" id="sqwzT@?NV(-nv25.FA8i"><field name="MEMBER">Player</field></shadow></value></block></value><next><block type="variables_set" id="ZDugKs+g-P={=U*%})Ih"><field name="VAR" id="+=/NN]6Wzd+gOs=9CQ)o">Player_2</field><value name="VALUE"><shadow type="math_number"><field name="NUM">0</field></shadow><block type="spritescreate" id="7%mi42xh@ZSBOMD.1r?`"><value name="img"><shadow type="screen_image_picker" id="E|WX*RbVdICozRsY6SD+"><field name="img">img`
 . . . . . . . . . . . . . . . . 
 . . . . . . . . . . . . . . . . 

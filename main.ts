@@ -345,15 +345,15 @@ Player_1 = sprites.create(img`
     . . 2 2 2 d d d d d d d d . . . 
     . . 2 2 f d d d d d d d f . . . 
     . 2 2 f c f f f b f f f c f . . 
-    . 2 2 c c f f f b f f f c c . . 
-    . . . c c f f f b f f f c c . . 
-    . . . c c f f f b f f f c c . . 
-    . . . c c 8 8 8 8 8 8 8 c c . . 
-    . . . d d 8 8 8 8 8 8 8 d d . . 
-    . . . d d 8 8 8 8 8 8 8 d d . . 
-    . . . . . 8 8 8 . 8 8 8 . . . . 
-    . . . . . f f f . f f f . . . . 
-    . . . . . f f f 6 f f f 6 . . . 
+    . . 2 c c f f f b f f f c c . . 
+    . . c c c f f f b f f f c c . . 
+    . c c c . f f f b f f f c c . . 
+    . c c d d f f f 8 f f f c c . . 
+    . . c d d 8 8 8 8 8 8 8 d d . . 
+    . . . . . 8 8 8 8 . 8 8 8 d . . 
+    . . . . . 8 8 8 . . . 8 8 8 8 . 
+    . . . . . f f f . . . . f f f . 
+    . . . . . f f f 6 . . . f f f 6 
     `, SpriteKind.Player)
 let Player_2 = sprites.create(img`
     . . . . . . . . . . . . . . . . 
