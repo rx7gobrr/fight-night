@@ -126,16 +126,27 @@ namespace myImages {
 666666666fffffffffffffffffffffffffffffffffff666666666666666666666666666666666666666666666666666666666666666666666ff88888888888888ffffffffffffffffff6666666666666
 666666666fffffffffffffffffffffffffffffffffff666666666666666666666666666666666666666666666666666666666666666666666ffffffffffffffffffffffffffffffffff6666666666666
 `;
-            case "image1":
-            case "Boolet":return img`
-f f f f f . . 
-f b b 7 f f f 
-f f f 7 7 7 f 
-f b b 7 f f f 
-f f f f f . . 
+            case "image4":
+            case "Britnee":return img`
+. . . . 2 2 2 2 2 2 2 2 2 . . . 
+. . . 2 2 2 2 2 2 d d 2 2 . . . 
+. . . 2 2 2 d 2 d f d f 2 2 . . 
+. . 2 2 2 d d d d f d f d 2 . . 
+. . 2 2 2 d d d d d d d d . . . 
+. . 2 2 f d d d d d d d f . . . 
+. 2 2 f c f f f b f f f c f . . 
+. . 2 c c f f f b f f f c c . . 
+. . c c c f f f b f f f c c . . 
+. c c c . f f f b f f f c c . . 
+. c c d d f f f 8 f f f c c . . 
+. . c d d 8 8 8 8 8 8 8 d d . . 
+. . . . . 8 8 8 8 . 8 8 8 d . . 
+. . . . . 8 8 8 . . . 8 8 8 8 . 
+. . . . . f f f . . . . f f f . 
+. . . . . f f f 6 . . . f f f 6 
 `;
             case "image3":
-            case "Diah wache flued":return img`
+            case "Drian":return img`
 . 3 3 3 3 3 3 3 3 3 3 . . . . . 
 3 3 3 3 3 3 3 3 3 3 3 . . . . . 
 3 3 3 3 e 3 e f e f 3 3 . 3 2 3 
@@ -152,6 +163,14 @@ e e 4 a a 4 4 4 a a 4 . . . . .
 . . a a a . . . a a a . . . . . 
 . . d d d . . . d d d . . . . . 
 . . d d d 5 . . d d d 5 . . . . 
+`;
+            case "image1":
+            case "Boo-Shock":return img`
+f f f f f . . 
+f b b 7 f f f 
+f f f 7 7 7 f 
+f b b 7 f f f 
+f f f f f . . 
 `;
         }
         return null;

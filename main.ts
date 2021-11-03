@@ -352,11 +352,15 @@ function Start_Code () {
 }
 let LorR = 0
 let bullet: Sprite = null
-let Player_2: Sprite = null
 let Player_1: Sprite = null
+let Player_2: Sprite = null
 let Game_Started = false
 Game_Started = false
-Player_1 = sprites.create(img`
+Player_2 = sprites.create(assets.image`Drian`, SpriteKind.Player)
+Player_1 = sprites.create(assets.image`Britnee`, SpriteKind.Player)
+animation.runImageAnimation(
+Player_1,
+[img`
     . . . . 2 2 2 2 2 2 2 2 2 . . . 
     . . . 2 2 2 2 2 2 d d 2 2 . . . 
     . . . 2 2 2 d 2 d f d f 2 2 . . 
@@ -373,11 +377,166 @@ Player_1 = sprites.create(img`
     . . . . . 8 8 8 . . . 8 8 8 8 . 
     . . . . . f f f . . . . f f f . 
     . . . . . f f f 6 . . . f f f 6 
-    `, SpriteKind.Player)
-Player_2 = sprites.create(assets.image`Diah wache flued`, SpriteKind.Player)
+    `,img`
+    . . . . 2 2 2 2 2 2 2 2 2 . . . 
+    . . . 2 2 2 2 2 2 d d 2 2 . . . 
+    . . . 2 2 2 d 2 d f d f 2 2 . . 
+    . . 2 2 2 d d d d f d f d 2 . . 
+    . . 2 2 2 d d d d d d d d . . . 
+    . . 2 2 f d d d d d d d f . . . 
+    . 2 2 f c f f f b f f f c f . . 
+    . . 2 c c f f f b f f f c c . . 
+    . . c c c f f f b f f f c c . . 
+    . c c c . f f f b f f f c c . . 
+    . c c d d f f f 8 f f f c c . . 
+    . . c d d 8 8 8 8 8 8 8 d d . . 
+    . . . . . 8 8 8 8 . 8 8 8 d 6 . 
+    . . . . . 8 8 8 . . . 8 8 f f . 
+    . . . . . f f f . . . . f f f . 
+    . . . . . f f f 6 . . . f f . . 
+    `,img`
+    . . . . 2 2 2 2 2 2 2 2 2 . . . 
+    . . . 2 2 2 2 2 2 d d 2 2 . . . 
+    . . . 2 2 2 f 2 f d d d 2 2 . . 
+    . . 2 2 2 d f d f d d d d 2 . . 
+    . . 2 2 2 d d d d d d d d . . . 
+    . . 2 2 f d d d d d d d f . . . 
+    . 2 2 f c f f f b f f f c f . . 
+    . . 2 c c f f f b f f f c c . . 
+    . . c c c f f f b f f f c c . . 
+    . c c c . f f f b f f f c c . . 
+    . c c d d f f f 8 f f f c c . . 
+    . . c d d 8 8 8 8 8 8 8 d d . . 
+    . . . . . 8 8 8 8 . 8 8 8 d . . 
+    . . . . . 8 8 8 . . . 8 8 8 8 . 
+    . . . . . f f f . . . . f f f . 
+    . . . . . f f f 6 . . . f f f 6 
+    `,img`
+    . . . . 2 2 2 2 2 2 2 2 2 . . . 
+    . . . 2 2 2 2 2 2 d d 2 2 . . . 
+    . . . 2 2 2 f 2 f d d d 2 2 . . 
+    . . 2 2 2 d f d f d d d d 2 . . 
+    . . 2 2 2 d d d d d d d d . . . 
+    . . 2 2 f d d d d d d d f . . . 
+    . 2 2 f c f f f b f f f c f . . 
+    . . 2 c c f f f b f f f c c . . 
+    . . c c c f f f b f f f c c . . 
+    . c c c . f f f b f f f c c . . 
+    . c c d d f f f 8 f f f c c . . 
+    . . c d d 8 8 8 8 8 8 8 d d . . 
+    . . . . . 8 8 8 8 . 8 8 8 d 6 . 
+    . . . . . 8 8 8 . . . 8 8 f f . 
+    . . . . . f f f . . . . f f f . 
+    . . . . . f f f 6 . . . f f . . 
+    `,img`
+    . . . . 2 2 2 2 2 2 2 2 2 . . . 
+    . . . 2 2 2 2 2 2 d d 2 2 . . . 
+    . . . 2 2 2 d 2 d f d f 2 2 . . 
+    . . 2 2 2 d d d d f d f d 2 . . 
+    . . 2 2 2 d d d d d d d d . . . 
+    . . 2 2 f d d d d d d d f . . . 
+    . 2 2 f c f f f b f f f c f . . 
+    . . 2 c c f f f b f f f c c . . 
+    . . c c c f f f b f f f c c . . 
+    . c c c . f f f b f f f c c . . 
+    . c d d . f f f 8 f f f c c . . 
+    . . d d . 8 8 8 8 8 8 8 d d . . 
+    . . . . . 8 8 8 8 . 8 8 8 d . . 
+    . . . . . 8 8 8 . . . 8 8 8 8 . 
+    . . . . . f f f . . . . f f f . 
+    . . . . . f f f 6 . . . f f f 6 
+    `,img`
+    . . . . 2 2 2 2 2 2 2 2 2 . . . 
+    . . . 2 2 2 2 2 2 d d 2 2 . . . 
+    . . . 2 2 2 d 2 d f d f 2 2 . . 
+    . . 2 2 2 d d d d f d f d 2 . . 
+    . . 2 2 2 d d d d d d d d . . . 
+    . . 2 2 f d d d d d d d f . . . 
+    . 2 2 f c f f f b f f f c f . . 
+    . . 2 c c f f f b f f f c c . . 
+    . . c c c f f f b f f f c c . . 
+    . d d c . f f f b f f f c c . . 
+    . d d . . f f f 8 f f f c c . . 
+    . . . . . 8 8 8 8 8 8 8 d d . . 
+    . . . . . 8 8 8 8 . 8 8 8 d . . 
+    . . . . . 8 8 8 . . . 8 8 8 8 . 
+    . . . . . f f f . . . . f f f . 
+    . . . . . f f f 6 . . . f f f 6 
+    `,img`
+    . . . . 2 2 2 2 2 2 2 2 2 . . . 
+    . . . 2 2 2 2 2 2 d d 2 2 . . . 
+    . . . 2 2 2 d 2 d f d f 2 2 . . 
+    . . 2 2 2 d d d d f d f d 2 . . 
+    . . 2 2 2 d d d d d d d d . . . 
+    . . 2 2 f d d d d d d d f . . . 
+    . 2 2 f c f f f b f f f c f . . 
+    . d d c c f f f b f f f c c . . 
+    . d d c c f f f b f f f c c . . 
+    . c c c . f f f b f f f c c . . 
+    . . c . . f f f 8 f f f c c . . 
+    . . . . . 8 8 8 8 8 8 8 d d . . 
+    . . . . . 8 8 8 8 . 8 8 8 d . . 
+    . . . . . 8 8 8 . . . 8 8 8 8 . 
+    . . . . . f f f . . . . f f f . 
+    . . . . . f f f 6 . . . f f f 6 
+    `,img`
+    . . . 2 2 2 2 2 2 2 2 2 2 . . . 
+    . 2 2 2 2 2 2 2 2 d d 2 2 . . . 
+    2 2 2 2 2 2 d 2 d f d f 2 2 . . 
+    . 2 2 2 2 d d d d f d f d 2 . . 
+    . . . 2 2 d d d d d d d d . . . 
+    . d . 2 f d d d d d d d f . . . 
+    . d . f c f f f b f f f c f . . 
+    . d d c c f f f b f f f c c . . 
+    . d d c c f f f b f f f c c . . 
+    . c c c . f f f b f f f c c . . 
+    . . c . . f f f 8 f f f c c . . 
+    . . . . . 8 8 8 8 8 8 8 d d . . 
+    . . . . . 8 8 8 8 . 8 8 8 d . . 
+    . . . . . 8 8 8 . . . 8 8 8 8 . 
+    . . . . . f f f . . . . f f f . 
+    . . . . . f f f 6 . . . f f f 6 
+    `,img`
+    . . . . 2 2 2 2 2 2 2 2 2 . . . 
+    . . 2 2 2 2 2 2 2 d d 2 2 . . . 
+    . 2 2 2 2 2 d 2 d f d f 2 2 . . 
+    2 2 2 2 2 d d d d f d f d 2 . . 
+    . 2 . 2 2 d d d d d d d d . . . 
+    . . . 2 f d d d d d d d f . . . 
+    . . . f c f f f b f f f c f . . 
+    . d d c c f f f b f f f c c . . 
+    . d d c c f f f b f f f c c . . 
+    . c c c . f f f b f f f c c . . 
+    . . c . . f f f 8 f f f c c . . 
+    . . . . . 8 8 8 8 8 8 8 d d . . 
+    . . . . . 8 8 8 8 . 8 8 8 d . . 
+    . . . . . 8 8 8 . . . 8 8 8 8 . 
+    . . . . . f f f . . . . f f f . 
+    . . . . . f f f 6 . . . f f f 6 
+    `,img`
+    . . . . 2 2 2 2 2 2 2 2 2 . . . 
+    . . . 2 2 2 2 2 2 d d 2 2 . . . 
+    . . 2 2 2 2 d 2 d f d f 2 2 . . 
+    . . 2 2 2 d d d d f d f d 2 . . 
+    . . 2 2 2 d d d d d d d d . . . 
+    . 2 2 2 f d d d d d d d f . . . 
+    . . 2 f c f f f b f f f c f . . 
+    . . c c c f f f b f f f c c . . 
+    . c c c c f f f b f f f c c . . 
+    . d d . . f f f b f f f c c . . 
+    . d d . . f f f 8 f f f c c . . 
+    . . . . . 8 8 8 8 8 8 8 d d . . 
+    . . . . . 8 8 8 8 . 8 8 8 d . . 
+    . . . . . 8 8 8 . . . 8 8 8 8 . 
+    . . . . . f f f . . . . f f f . 
+    . . . . . f f f 6 . . . f f f 6 
+    `],
+500,
+true
+)
 Player_1.setPosition(76, 93)
 Player_2.setPosition(76, 93)
-bullet = sprites.create(assets.image`Boolet`, SpriteKind.Projectile)
+bullet = sprites.create(assets.image`Boo-Shock`, SpriteKind.Projectile)
 scene.setBackgroundImage(assets.image`Main Menu Background`)
 blockMenu.showMenu([
 "1 Player",

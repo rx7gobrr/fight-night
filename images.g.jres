@@ -4,15 +4,20 @@
         "mimeType": "image/x-mkcd-f4",
         "displayName": "Main Menu Background"
     },
-    "image1": {
-        "data": "hwQHAAUAAAD//w8Av78PAL+/DwB/dw8A//cPAPD3AADw/wAA",
+    "image4": {
+        "data": "hwQQABAAAAAAAAAAAAAAAAAAAALADAAAACAiIszMAAAgIiLPzN0AACIi8swM3QAAItLd//+PiP8i3d3//4+I/yLS3f//j4j/It3du7uICGDS/93//48AANLd3f//jwgAIv/d//+PiAAi0v3MzNyI/wAiAM/M3I3/AAAAAAAAgP8AAAAAAAAAYA==",
         "mimeType": "image/x-mkcd-f4",
-        "displayName": "Boolet"
+        "displayName": "Britnee"
     },
     "image3": {
         "data": "hwQQABAAAAAwMzOHiO4AADPjfoiI7gAAM+Pul5lEqt0z4+6HiKSq3TPu7oeIpKrdM+Puh0hEClAz7u6HSEUKADP/7odIRAoAM+7uh4ikqt0z/+6HiKSq3TPj7peZRKrdAON+iIgAAFAAAACHiAgAAAAzBgCACAAAADIiItIAAAAAMwYA3QAAAA==",
         "mimeType": "image/x-mkcd-f4",
-        "displayName": "Diah wache flued"
+        "displayName": "Drian"
+    },
+    "image1": {
+        "data": "hwQHAAUAAAD//w8Av78PAL+/DwB/dw8A//cPAPD3AADw/wAA",
+        "mimeType": "image/x-mkcd-f4",
+        "displayName": "Boo-Shock"
     },
     "*": {
         "mimeType": "image/x-mkcd-f4",
