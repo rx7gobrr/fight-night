@@ -352,6 +352,24 @@ Player_1 = sprites.create(img`
     . . . . . f f f . f f f . . . . 
     . . . . . f f f 6 f f f 6 . . . 
     `, SpriteKind.Player)
+let Player_2 = sprites.create(img`
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    . . . . . . . . . . . . . . . . 
+    `, SpriteKind.Player)
 Player_1.setPosition(76, 93)
 bullet = sprites.create(assets.image`Boolet`, SpriteKind.Projectile)
 scene.setBackgroundImage(assets.image`Main Menu Background`)
