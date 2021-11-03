@@ -133,11 +133,11 @@ function Tutorial () {
             ................................................................................................................................................................
             ................................................................................................................................................................
             ................................................................................................................................................................
-            .............................................................................................................................................................ddd
-            ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd..d
-            d......d....d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d....d....d...d...d...d...d....d
-            d......d....d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d....d....d...d...d...d...d....d
-            d......d....d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d...d....d....d...d...d...d...d....d
+            ................................................................................................................................................................
+            dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+            dbbbbbbdbbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbbdbbbbdbbbdbbbdbbbdbbbdbbbbd
+            dbbbbbbdbbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbbdbbbbdbbbdbbbdbbbdbbbdbbbbd
+            dbbbbbbdbbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbdbbbbdbbbbdbbbdbbbdbbbdbbbdbbbbd
             dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
             cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc
             caaaaaaaaacccccccccccccccccccccccccaaaaaaaacccccccccccaaaaaacccccccccccccccccccccccccccccccccccccccccccaaaaaaaaaccccccccccaaaaaaccccccccccccccccccccccccccccaaaa
