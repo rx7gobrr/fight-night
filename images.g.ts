@@ -3,10 +3,6 @@ namespace myImages {
 
     helpers._registerFactory("image", function(name: string) {
         switch(helpers.stringTrim(name)) {
-            case "image1":
-            case "Boolet":return img`
-f f f 
-`;
             case "image2":
             case "Main Menu Background":return img`
 33333333333aaaaaaaaaaaaaaaaaaaaaaaaaaaaa99999999999999999999999999999888888888888888888888888888888999999999999999999999999999aaaaaaaaaaaaaaaaaaaaaaaa3333333333
@@ -129,6 +125,14 @@ f f f
 666666666ffffffffffffffff22222222fffffffffff666666666666666666666666666666666666666666666666666666666666666666666888888888888888888ffffffffffffffff6666666666666
 666666666fffffffffffffffffffffffffffffffffff666666666666666666666666666666666666666666666666666666666666666666666ff88888888888888ffffffffffffffffff6666666666666
 666666666fffffffffffffffffffffffffffffffffff666666666666666666666666666666666666666666666666666666666666666666666ffffffffffffffffffffffffffffffffff6666666666666
+`;
+            case "image1":
+            case "Boolet":return img`
+f f f f f . . 
+f b b 7 f f f 
+f f f 7 7 7 f 
+f b b 7 f f f 
+f f f f f . . 
 `;
         }
         return null;
