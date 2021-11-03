@@ -176,6 +176,26 @@ sprites.onOverlap(SpriteKind.Player, Boolet, function (sprite, otherSprite) {
     music.pewPew.play()
     pause(1000)
 })
+blockMenu.onMenuOptionSelected(function (option, index) {
+    if (option == "Tutorial") {
+        Game_Started = true
+        blockMenu.setControlsEnabled(false)
+        blockMenu.closeMenu()
+        Tutorial()
+    }
+    if (option == "Credits") {
+        Player_1.destroy()
+        Game_Started = true
+        Credits()
+    }
+    if (option == "1 Player") {
+        Game_Started = true
+        Player_1.destroy()
+        blockMenu.setControlsEnabled(false)
+        blockMenu.closeMenu()
+        Start_Code()
+    }
+})
 function Start_Code () {
     if (Game_Started == true) {
         scene.setBackgroundImage(img`
@@ -309,26 +329,6 @@ function Start_Code () {
         LorR = 1
     }
 }
-blockMenu.onMenuOptionSelected(function (option, index) {
-    if (option == "Tutorial") {
-        Game_Started = true
-        blockMenu.setControlsEnabled(false)
-        blockMenu.closeMenu()
-        Tutorial()
-    }
-    if (option == "Credits") {
-        Player_1.destroy()
-        Game_Started = true
-        Credits()
-    }
-    if (option == "1 Player") {
-        Game_Started = true
-        Player_1.destroy()
-        blockMenu.setControlsEnabled(false)
-        blockMenu.closeMenu()
-        Start_Code()
-    }
-})
 let LorR = 0
 let bullet: Sprite = null
 let Player_1: Sprite = null
