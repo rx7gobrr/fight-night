@@ -3,25 +3,6 @@ namespace myImages {
 
     helpers._registerFactory("image", function(name: string) {
         switch(helpers.stringTrim(name)) {
-            case "image4":
-            case "Britnee":return img`
-. . . . 2 2 2 2 2 2 2 2 2 . . . 
-. . . 2 2 2 2 2 2 d d 2 2 . . . 
-. . . 2 2 2 d 2 d f d f 2 2 . . 
-. . 2 2 2 d d d d f d f d 2 . . 
-. . 2 2 2 d d d d d d d d . . . 
-. . 2 2 f d d d d d d d f . . . 
-. 2 2 f c f f f b f f f c f . . 
-. . 2 c c f f f b f f f c c . . 
-. . c c c f f f b f f f c c . . 
-. c c c . f f f b f f f c c . . 
-. c c d d f f f 8 f f f c c . . 
-. . c d d 8 8 8 8 8 8 8 d d . . 
-. . . . . 8 8 8 8 . 8 8 8 d . . 
-. . . . . 8 8 8 . . . 8 8 8 8 . 
-. . . . . f f f . . . . f f f . 
-. . . . . f f f 6 . . . f f f 6 
-`;
             case "image1":
             case "Boo-Shock":return img`
 f f f f f . . 
@@ -171,6 +152,25 @@ ee4aa444aa4..............
 ..aaa...aaa..............
 ..ddd...ddd..............
 ..ddd2..ddd2.............
+`;
+            case "image4":
+            case "Britknee":return img`
+. . . . 2 2 2 2 2 2 2 2 2 . . . 
+. . . 2 2 2 2 2 2 d d 2 2 . . . 
+. . . 2 2 2 d 2 d f d f 2 2 . . 
+. . 2 2 2 d d d d f d f d 2 . . 
+. . 2 2 2 d d d d d d d d . . . 
+. . 2 2 f d d d d d d d f . . . 
+. 2 2 f c f f f b f f f c f . . 
+. . 2 c c f f f b f f f c c . . 
+. . c c c f f f b f f f c c . . 
+. c c c . f f f b f f f c c . . 
+. c c d d f f f 8 f f f c c . . 
+. . c d d 8 8 8 8 8 8 8 d d . . 
+. . . . . 8 8 8 8 . 8 8 8 d . . 
+. . . . . 8 8 8 . . . 8 8 8 8 . 
+. . . . . f f f . . . . f f f . 
+. . . . . f f f 6 . . . f f f 6 
 `;
         }
         return null;
